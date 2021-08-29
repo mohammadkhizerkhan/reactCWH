@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+
 export default function NavBar(props) {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -33,6 +34,8 @@ NavBar.propTypes={
     title:PropTypes.string,
     aboutUs:PropTypes.string,
 }
+
+
 
 // NavBar.defaultProps={
 //     title:"set title here",
