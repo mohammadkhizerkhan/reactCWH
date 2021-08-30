@@ -10,7 +10,7 @@ export default function About() {
     const [btnText, setbtnText] = useState("Enable white mode")
 
     const toggleBtn=()=>{
-        if(myStyle.color=="white"){
+        if(myStyle.color==="white"){
             setMyStyle({
                 color:"black",
                 backgroundColor:"white"

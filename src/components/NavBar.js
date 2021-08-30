@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 export default function NavBar(props) {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className={`navbar navbar-expand-lg navbar-${props.modes} bg-${props.modes}`}>
   <div className="container-fluid">
     <a className="navbar-brand" href="/">{props.title}</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,6 +24,10 @@ export default function NavBar(props) {
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>
+      <div className={`form-check form-switch text-${props.modes==="light"?"dark":"light"}`}>
+        <input onClick={props.toggleMode} className="form-check-input mx-3 " type="checkbox" id="flexSwitchCheckDefault"/>
+        <label className="form-check-label " htmlFor="flexSwitchCheckDefault">{props.modes}</label>
+      </div>
     </div>
   </div>
 </nav>
